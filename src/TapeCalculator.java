@@ -96,11 +96,11 @@ public class TapeCalculator implements ActionListener, ItemListener{
 			System.out.println(pForce);
 			System.out.println(selectedTape.adhesion);
 			System.out.println(selectedTape.width);
-			double cmOfTapeNeeded = Math.ceil(pForce / (selectedTape.adhesion * (selectedTape.width / 48.0)));
-			double stripsNeeded = Math.ceil(pForce / (selectedTape.tensile * (selectedTape.width / 48.0)));
+			double cmOfTapeNeeded = Math.ceil(pForce / (selectedTape.adhesion * (selectedWidth / 48.0)));
+			double stripsNeeded = Math.ceil(pForce / (selectedTape.tensile * (selectedWidth / 48.0)));
 			lengthLabel.setText("Length of adhesive needed: " + cmOfTapeNeeded + "cm");
 			stripsLabel.setText("Number of strips needed: " + stripsNeeded);
-			System.out.println("Length of adhesive needed: "+cmOfTapeNeeded);
+			System.out.println("Length of adhesive needed: "+cmOfTapeNeeded + "cm");
 			System.out.println("Number of strips of tape needed: " + stripsNeeded);
 		}
 	}
