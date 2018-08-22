@@ -133,12 +133,12 @@ public class StapleCalculator implements ActionListener, ItemListener {
 	
 	void calculateDiameterFromGuage(int guage) {
 		double d = 0.127*Math.pow(92.0, (36.0-guage)/39.0);
-		diameter = (float) d;
+		diameter = (float) d * 0.002f;
 	}
 	
 	void calculateAreaFromGuage(int guage) {
-		double area = 0.012668*Math.pow(92, (36.0-guage)/19.5);
-		stapleArea = area * 2.0;
+		double area = 0.012668*Math.pow(92.0, ((36.0-guage)/19.5));
+		stapleArea = area * 0.002;
 	}
 
 	void initializeSteelMap() {
