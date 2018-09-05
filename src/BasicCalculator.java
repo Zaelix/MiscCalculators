@@ -140,6 +140,18 @@ public class BasicCalculator implements ActionListener {
 		if (bt.equals("+")) {
 			add();
 		}
+		
+		if (bt.equals("-")) {
+			subtract();
+		}
+		
+		if (bt.equals("*")) {
+			multiply();
+		}
+		
+		if (bt.equals("/")) {
+			divide();
+		}
 
 		if (bt.equals("=")) {
 			calculate();
@@ -161,6 +173,24 @@ public class BasicCalculator implements ActionListener {
 	public void add() {
 		num1 = num1 + Double.parseDouble(field.getText());
 		equation.setText(equation.getText() + field.getText() + "+");
+		field.setText("");
+	}
+	
+	public void subtract() {
+		num1 = num1 - Double.parseDouble(field.getText());
+		equation.setText(equation.getText() + field.getText() + "-");
+		field.setText("");
+	}
+	
+	public void multiply() {
+		num1 = num1 * Double.parseDouble(field.getText());
+		equation.setText(equation.getText() + field.getText() + "*");
+		field.setText("");
+	}
+	
+	public void divide() {
+		num1 = num1 / Double.parseDouble(field.getText());
+		equation.setText(equation.getText() + field.getText() + "/");
 		field.setText("");
 	}
 
